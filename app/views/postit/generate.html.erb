@@ -1,0 +1,32 @@
+
+<%= stylesheet_link_tag('postit.css', :plugin => 'redmine_scrum_cards', :media => 'all') %>
+
+<%for @issue in @issues %>
+
+	<div class="post-it-view">
+		
+		<label class="id">#<%= @issue.id%></label>
+		<label class="project"><%= @issue.project.name %></label>
+		<label class="subject"><%= @issue.subject %></label>		
+		<label class="priority"><%= @issue.priority.nil? ? '' : @issue.priority.position %></label>
+		
+		<div class="left-corner">
+			<div class="box-corner">
+				<label class="assignee">
+					<%= @issue.assigned_to.nil? ? '' : @issue.assigned_to.firstname.chr.upcase + @issue.assigned_to.lastname.chr.upcase %>
+				</label>	
+			</div>
+			<div class="box-corner">
+				<label class="tester">
+					<% if !@tester_field.nil? %>
+						<% @tester_id = @issue.custom_value_for(@tester_field.id) %>
+						<% @tester = @tester_id.nil? ? nil : User.where(id: @tester_id.to_s).first %>
+						<%= @tester.nil? ? '' : @tester.firstname.chr.upcase + @tester.lastname.chr.upcase %>
+					<% end %>
+				</label>	
+			</div>			
+		</div>
+		
+	</div>
+
+<% end %>

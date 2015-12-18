@@ -1,0 +1,92 @@
+@media screen, print {
+
+@font-face {
+  font-family: 'Architects Daughter';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Architects Daughter'), local('ArchitectsDaughter'), url(https://fonts.gstatic.com/s/architectsdaughter/v6/RXTgOOQ9AAtaVOHxx0IUBM3t7GjCYufj5TXV5VnA2p8.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+@font-face {
+  font-family: 'Chewy';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Chewy'), url(https://fonts.gstatic.com/s/chewy/v7/rb3O4cUMVLYzfgbaJOdJHw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+.post-it-view {
+	position: relative;
+	display: block;
+	float: left;
+	margin: 15px;
+	border: 1px solid;
+	width: 280px;
+	height: 280px;
+	font-family: 'Architects Daughter';
+}
+
+.post-it-view .id {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-size: 11px;
+	font-family: 'Chewy';
+}
+
+.post-it-view .project {
+	display: block;
+	margin-top: 20px;
+	width: 100%;
+	text-align: center;	
+	font-size: 16px;
+}
+
+.post-it-view .subject {
+	display: block;
+	margin-top: 20px;
+	width: 100%;
+	text-align: center;	
+	/*font-weight: bold;*/
+	font-size: 24px;
+	max-height: 170px;
+	overflow: hidden;
+}
+
+.post-it-view .left-corner {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+.post-it-view .box-corner {
+	float: left;
+	width: 70px;
+	height: 70px;
+	border-right: 1px solid;
+	border-top: 1px solid;
+}
+
+.post-it-view .assignee {
+	position: absolute;
+	bottom: 22px;
+	left: 22px;
+	font-size: 20px;
+}
+
+.post-it-view .tester {
+	position: absolute;
+	bottom: 22px;
+	left: 92px;
+	font-size: 20px;
+}
+
+.post-it-view .priority {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	font-size: 15px;
+}
+
+}

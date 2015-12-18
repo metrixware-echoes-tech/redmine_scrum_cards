@@ -1,0 +1,12 @@
+
+<%= stylesheet_link_tag('redmine_scrum_cards.css', :plugin => 'redmine_scrum_cards', :media => 'all') %>
+
+<%= link_to "post-it", { 
+	:controller => 'postit', 
+	:action => 'generate', 
+	:project_id => @project.id ,
+	:issues_id => @issue.nil? ? @issues.map { |issue| issue.id } : [@issue.id],
+	}, { 
+		:class => "postit-generate-button",
+		:target => '_blank'
+	} %>
