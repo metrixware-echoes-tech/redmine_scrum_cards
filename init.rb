@@ -3,8 +3,8 @@ Redmine::Plugin.register :redmine_scrum_cards do
   author 'Echoes Labs'
   description 'Plugin for generating printable scrum cards'
   version '0.1'
-  url 'http://example.com/path/to/plugin'
-  author_url 'http://example.com/about'
+  url 'https://github.com/echoes-tech/redmine_scrum_cards'
+  author_url 'https://github.com/echoes-tech'
   
   settings :default => { 'tester_field_name' => '' }, :partial => 'settings/scrum_cards_settings'
   
