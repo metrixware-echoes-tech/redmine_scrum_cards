@@ -43,6 +43,12 @@
 	font-size: 16px;
 }
 
+.post-it-view .version {
+	display: block;
+	font-size: 14px;
+	color: #666;
+}
+
 .post-it-view .subject {
 	display: block;
 	margin-top: 20px;

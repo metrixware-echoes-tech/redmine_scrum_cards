@@ -8,7 +8,14 @@
 	<div class="post-it-view">
 		
 		<label class="id">#<%= @issue.id%></label>
-		<label class="project"><%= @issue.project.name %></label>
+		<label class="project">
+			<%= @issue.project.name %>
+			<label class="version">
+				<% @version = get_issue_version(@issue) %>
+				<%= @version.nil? ? '' : @version.name %>
+			</label>
+		</label>
+		
 		<label class="subject"><%= @issue.subject %></label>		
 		<label class="priority"><%= @issue.priority.nil? ? '' : @issue.priority.name %></label>
 		

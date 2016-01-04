@@ -1,5 +1,15 @@
 module PostitHelper
   
+  def get_issue_version(issue)
+    
+    if !issue.nil? && !issue.fixed_version_id.nil?
+      return Version.find(issue.fixed_version_id.to_s)  
+    end
+    
+    return nil
+    
+  end
+  
   def get_issue_tester(issue)
     
     tester_field = get_tester_field()
