@@ -59,12 +59,26 @@
 	bottom: 0;
 }
 
+.post-it-view .right-corner {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
 .post-it-view .box-corner {
 	float: left;
 	width: 70px;
 	height: 70px;
 	border-right: 1px solid;
 	border-top: 1px solid;
+}
+
+.post-it-view .deadline {
+	position: absolute;
+	bottom: 25px;
+	right: 15px;
+	min-width: 63px;
+	font-size: 14px;
 }
 
 .post-it-view .assignee {

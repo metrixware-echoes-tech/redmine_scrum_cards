@@ -6,7 +6,7 @@ Redmine::Plugin.register :redmine_scrum_cards do
   url 'https://github.com/echoes-tech/redmine_scrum_cards'
   author_url 'https://github.com/echoes-tech'
   
-  settings :default => { 'tester_field_name' => '' }, :partial => 'settings/scrum_cards_settings'
+  settings :default => { 'tester_field_name' => '', 'date_formatter' => "%d/%m/%Y" }, :partial => 'settings/scrum_cards_settings'
   
 end
 

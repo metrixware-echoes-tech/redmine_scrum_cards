@@ -1,6 +1,8 @@
 class PostitController < ApplicationController
   unloadable
   
+  helper :postit
+  
   def generate
     
     Rails.logger.info "generating post-it..."
@@ -9,10 +11,7 @@ class PostitController < ApplicationController
     
     if !issues_id.nil?
                 
-      issues_id.each{ |id| Rails.logger.info "issue #"+id }
-    
-      tester_field_name = Setting.plugin_redmine_scrum_cards['tester_field_name']
-      @tester_field = IssueCustomField.find_by_name(tester_field_name)
+      issues_id.each{ |id| Rails.logger.info "issue #"+id }     
       
       @issues = Issue.where(id: issues_id)
       
@@ -21,5 +20,5 @@ class PostitController < ApplicationController
     render "postit/generate", :layout => false
   
   end
-  
+
 end

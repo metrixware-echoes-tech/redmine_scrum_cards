@@ -1,6 +1,8 @@
 
 <%= stylesheet_link_tag('postit.css', :plugin => 'redmine_scrum_cards', :media => 'all') %>
 
+<% @date_formatter =  get_date_format() %>
+
 <%for @issue in @issues %>
 
 	<div class="post-it-view">
@@ -17,14 +19,17 @@
 				</label>	
 			</div>
 			<div class="box-corner">
-				<label class="tester">
-					<% if !@tester_field.nil? %>
-						<% @tester_id = @issue.custom_value_for(@tester_field.id) %>
-						<% @tester = @tester_id.nil? ? nil : User.where(id: @tester_id.to_s).first %>
-						<%= @tester.nil? ? '' : @tester.firstname.chr.upcase + @tester.lastname.chr.upcase %>
-					<% end %>
+				<label class="tester">				
+					<% @tester = get_issue_tester(@issue) %>
+					<%= @tester.nil? ? '' : @tester.firstname.chr.upcase + @tester.lastname.chr.upcase %>
 				</label>	
 			</div>			
+		</div>
+		
+		<div class="right-corner">
+			<label class="deadline">
+				<%= @issue.due_date.nil? ? '' : @issue.due_date.strftime(@date_formatter) %>
+			</label>	
 		</div>
 		
 	</div>
