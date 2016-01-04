@@ -1,5 +1,23 @@
 module PostitHelper
   
+  def get_issue_due_date(issue)
+    
+    if !issue.nil?
+    
+      return issue.due_date unless issue.due_date.nil?
+      
+      version = get_issue_version(issue)
+      
+      if !version.nil?
+        return version.effective_date unless version.effective_date.nil?
+      end
+      
+    end
+    
+    return nil
+    
+  end
+  
   def get_issue_version(issue)
     
     if !issue.nil? && !issue.fixed_version_id.nil?

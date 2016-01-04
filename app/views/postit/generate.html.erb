@@ -41,7 +41,8 @@
 		
 		<div class="right-corner">
 			<label class="deadline">
-				<%= @issue.due_date.nil? ? '' : @issue.due_date.strftime(@date_formatter) %>
+				<% @due_date = get_issue_due_date(@issue) %>
+				<%= @due_date.nil? ? '' : @due_date.strftime(@date_formatter) %>
 			</label>	
 		</div>
 		
