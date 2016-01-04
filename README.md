@@ -1,4 +1,6 @@
 
+[![Build Status](https://api.travis-ci.org/echoes-tech/redmine_scrum_cards.svg)](https://travis-ci.org/echoes-tech/redmine_scrum_cards)
+
 # redmine scrum cards
 
 Redmine plugin for generating printable scrum cards.
