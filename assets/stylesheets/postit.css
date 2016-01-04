@@ -37,7 +37,7 @@
 
 .post-it-view .project {
 	display: block;
-	margin-top: 20px;
+	margin-top: 24px;
 	width: 100%;
 	text-align: center;	
 	font-size: 16px;
@@ -51,7 +51,7 @@
 
 .post-it-view .subject {
 	display: block;
-	margin-top: 20px;
+	margin-top: 18px;
 	width: 100%;
 	text-align: center;	
 	font-size: 22px;
