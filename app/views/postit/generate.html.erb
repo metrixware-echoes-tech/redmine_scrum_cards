@@ -8,6 +8,7 @@
 	<div class="post-it-view">
 		
 		<label class="id">#<%= @issue.id%></label>
+		
 		<label class="project">
 			<%= @issue.project.name %>
 			<label class="version">
@@ -16,8 +17,13 @@
 			</label>
 		</label>
 		
-		<label class="subject"><%= @issue.subject %></label>		
-		<label class="priority"><%= @issue.priority.nil? ? '' : @issue.priority.name %></label>
+		<label class="subject">
+			<%= truncate(@issue.subject, :length => 80, :separator => ' ') %>
+		</label>	
+			
+		<label class="priority">
+			<%= @issue.priority.nil? ? '' : @issue.priority.name %>
+		</label>
 		
 		<div class="left-corner">
 			<div class="box-corner">
