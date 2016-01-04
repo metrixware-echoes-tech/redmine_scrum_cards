@@ -10,7 +10,7 @@
 		<label class="id">#<%= @issue.id%></label>
 		<label class="project"><%= @issue.project.name %></label>
 		<label class="subject"><%= @issue.subject %></label>		
-		<label class="priority"><%= @issue.priority.nil? ? '' : @issue.priority.position %></label>
+		<label class="priority"><%= @issue.priority.nil? ? '' : @issue.priority.name %></label>
 		
 		<div class="left-corner">
 			<div class="box-corner">
