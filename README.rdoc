@@ -1,3 +1,0 @@
-= redmine_scrum_cards
-
-Description goes here
