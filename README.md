@@ -20,3 +20,10 @@ Redmine plugin for generating printable scrum cards.
 ## Supported Ruby versions
 
 - 2.1
+
+## How to use this plugin
+
+1. Select some issues from the issues list
+2. Right click on the issues list and you will see an option to generate scrum cards in the context menu
+3. Click on it and it will open a new tab containing all the generated cards for each selected issue
+4. Print! :-) 
