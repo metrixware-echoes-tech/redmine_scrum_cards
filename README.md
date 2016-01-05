@@ -1,5 +1,6 @@
 
 [![Build Status](https://api.travis-ci.org/echoes-tech/redmine_scrum_cards.svg)](https://travis-ci.org/echoes-tech/redmine_scrum_cards)
+[![Coverage Status](https://coveralls.io/repos/echoes-tech/redmine_scrum_cards/badge.svg?branch=develop&service=github)](https://coveralls.io/github/echoes-tech/redmine_scrum_cards?branch=develop)
 
 # redmine scrum cards
 
