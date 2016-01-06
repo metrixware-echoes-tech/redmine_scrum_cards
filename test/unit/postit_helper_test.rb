@@ -7,12 +7,15 @@ class PostitHelperTest < ActiveSupport::TestCase
   fixtures :versions
   fixtures :users
   
+  @@tester_field_name = 'tester_field_name'
+  @@date_formatter = 'date_formatter'
+  
   setup do
-    @tester_field_name = 'tester_field_name'
+    @settings = Setting.plugin_redmine_scrum_cards
     @helper = Object.new
     @helper.extend(PostitHelper)
   end
-  
+
   test "it should return the version associated to the issue" do
     
     issue = Issue.new
@@ -74,7 +77,7 @@ class PostitHelperTest < ActiveSupport::TestCase
     field_id = 35
     field_name = "tester"
     
-    Setting.plugin_redmine_scrum_cards[@tester_field_name] = field_name
+    @settings[@@tester_field_name] = field_name
     
     field = mock()
     field.expects(:nil?).returns(false)
@@ -107,7 +110,7 @@ class PostitHelperTest < ActiveSupport::TestCase
     field_id = 35
     field_name = "tester"
     
-    Setting.plugin_redmine_scrum_cards[@tester_field_name] = field_name
+    @settings[@@tester_field_name] = field_name
     
     field = mock()
     field.expects(:nil?).returns(false)
@@ -119,6 +122,37 @@ class PostitHelperTest < ActiveSupport::TestCase
     IssueCustomField.stubs(:find_by_name).with(field_name).returns(field)
     
     assert_equal nil, @helper.get_issue_tester(issue)
+    
+  end
+  
+  test "it should retrieve the date format from the settings" do
+    
+    date_format = "test"   
+    @settings[@@date_formatter] = date_format
+    
+    assert_equal date_format, @helper.get_date_format()
+    
+  end
+  
+  test "it should retrieve the default date format when the date format has not been defined" do
+    
+    @settings[@@date_formatter] = nil
+    
+    date_format = @helper.get_date_format()
+    
+    assert_not date_format.nil?
+    assert_not date_format.empty?
+    
+  end
+  
+  test "it should retrieve the default date format when the defined date format is an empty string" do
+    
+    @settings[@@date_formatter] = ''
+    
+    date_format = @helper.get_date_format()
+    
+    assert_not date_format.nil?
+    assert_not date_format.empty?
     
   end
   

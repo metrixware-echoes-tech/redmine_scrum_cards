@@ -1,0 +1,13 @@
+
+test_project:
+ id: 1
+ name: test_project
+ is_public: false
+ lft: 1
+ rgt: 2
+ 
+project_002:
+  id: 2
+  name: my project
+  lft: 1
+  rgt: 2
