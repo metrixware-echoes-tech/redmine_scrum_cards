@@ -3,7 +3,7 @@ Redmine::Plugin.register :redmine_scrum_cards do
   name 'Redmine Scrum Cards plugin'
   author 'Echoes'
   description 'Plugin for generating printable scrum cards'
-  version '0.1'
+  version '1.0.0'
   url 'https://github.com/echoes-tech/redmine_scrum_cards'
   author_url 'https://github.com/echoes-tech'
   
