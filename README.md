@@ -16,9 +16,11 @@ Redmine plugin for generating printable scrum cards.
 ## Supported Redmine versions
 
 - 3.2
+- 3.1
 
 ## Supported Ruby versions
 
+- 2.2
 - 2.1
 
 ## How to use this plugin

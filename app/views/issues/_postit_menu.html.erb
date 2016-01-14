@@ -4,7 +4,6 @@
 <%= link_to "Scrum Cards", { 
 	:controller => 'postit', 
 	:action => 'generate', 
-	:project_id => @project.id ,
 	:issues_id => @issue.nil? ? @issues.map { |issue| issue.id } : [@issue.id],
 	}, { 
 		:class => "postit-generate-button",
